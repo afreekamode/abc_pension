@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePensionKeysTable extends Migration
+class CreateAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreatePensionKeysTable extends Migration
      */
     public function up()
     {
-        Schema::create('pension_keys', function (Blueprint $table) {
-            $table->id();
+        Schema::create('admins', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ class CreatePensionKeysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pension_keys');
+        Schema::dropIfExists('admins');
     }
 }

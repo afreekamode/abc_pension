@@ -14,7 +14,15 @@ class CreateEmployeesTable extends Migration
     public function up()
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->integer('user_id')->nullable();
+            $table->string('employer_name', 100)->nullable();
+            $table->string('employer_code', 100)->nullable();
+            $table->string('nok_phone', 100)->nullable();
+            $table->string('nok_fname', 100)->nullable();
+            $table->string('nok_lname', 100)->nullable();
+            $table->string('nok_email', 100)->nullable();
+            $table->integer('profile_status')->default(0);
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePenRemitancesTable extends Migration
+class CreateEmployersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreatePenRemitancesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pen_remitances', function (Blueprint $table) {
-            $table->id();
+        Schema::create('employers', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ class CreatePenRemitancesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pen_remitances');
+        Schema::dropIfExists('employers');
     }
 }
