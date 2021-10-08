@@ -31,7 +31,7 @@ class VerificationController extends Controller
                 $prefix = 'EEM';
             }
             
-            $pensionPrefix = $prefix .'_'.$this->generatePin();
+            $pensionPrefix = $prefix.$this->generatePin();
 
             $token = $user->createToken('authToken')->accessToken;
         
