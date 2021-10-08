@@ -1,8 +1,8 @@
 
 
-## AMR Assessment
+# AMR Assessment
 
-# Contains associative routes
+## Contains associative routes
 
 - /api/v1/user/register/employer
 - /api/v1/user/register/employee
@@ -14,7 +14,7 @@
 - /password/v1/verify
 - /password/v1/reset
 
-# Installation
+## Installation
 - clone this repo 
 - cd into the project folder and run the following command:
 - composer install
