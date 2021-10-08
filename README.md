@@ -2,6 +2,9 @@
 
 # AMR Assessment
 
+- postman documentation
+#### https://documenter.getpostman.com/view/7712219/UUy7bjBM
+
 ## Contains associative routes
 
 - /api/v1/user/register/employer
