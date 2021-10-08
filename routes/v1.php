@@ -43,7 +43,6 @@ Route::post('/logout', 'Auth\LoginController@logout')->middleware('auth:api');
 //Users  Endpoits *******************************************************
 //This is the route group, every authenticated route with passport token should go in here
 Route::group(['middleware' => 'auth:api'], function () {
-    //Show active user i.e. current logged in user
     Route::get('/all', 'UserProfileController@index');
 
     //show one user
@@ -60,19 +59,14 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     //Delete user account
     Route::delete('/user/delete', 'UserProfileController@destroy');
-
     //////////End of User Endpoits//////////////
 
   //Pension Remitance Endpoits *******************************************************
-
     Route::get('/transaction/key/{trxn_key}', 'Trxn\NewTransactionsController@show'); //get a transaction key
 
     Route::post('/transaction/rsa', 'Trxn\NewTransactionsController@credit_employee')->middleware('employer');//credit employee
 
 });
 });
-
-Route::get('verify', 'Auth\VerificationController@generatePin');
-
 //Authentication Route
 // Auth::routes();
